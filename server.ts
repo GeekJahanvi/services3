@@ -19,6 +19,10 @@ app.use(bodyParser.urlencoded({ extended: false })).use(bodyParser.json());
   app.use(await loader('functions'));
 })();
 
+app.get('/',(req,res)=>{
+  res.send("hellooooo");
+  });
+  
 // App Listen
 app.listen(port, () => {
   console.log(`Action listening on port ${port}`);
